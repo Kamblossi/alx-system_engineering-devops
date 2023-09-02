@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -A | grep -E '^[0-9A-Za-z]' | sort) | (ls -A | grep -E '^\.|/$' | sort) | tr '\n' ', ' && echo
+ls -A1 | sed -e 's/$/,/' -e 's/[^0-9A-Za-z],/,/' | sort -t/ -k2,2
