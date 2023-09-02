@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x hello && chmod g+x hello && chmod o+x hello
+for p in u+x g+x o+x; do chmod $p hello; done
